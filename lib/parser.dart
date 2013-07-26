@@ -68,7 +68,7 @@ Operator NOT_IMPL_OP = (_, _x, _0, _1) => throw "Op not implemented";
 toBool(x) {
   if (x is bool) return x;
   if (x is int || x is double) return x != 0;
-  throw "Can't convert $x to boolean";
+  return x != null;
 }
 
 // Automatic type conversion.
